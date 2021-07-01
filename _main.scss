@@ -1,0 +1,57 @@
+.mid {
+    h2 {
+        @include headeris;
+        padding: 40px 0;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        padding: 41px 30px;
+        margin: 26px;
+        width: 20%;
+        min-width: 253px;
+    }
+    &__image {
+        display: flex;
+        background-color: $mainColor;
+        border-radius: 5px;
+        width: 47px;
+        height: 44px;
+        justify-content: center;
+        align-items: center;
+    }
+    .mid--light {
+        background-color: #FFFFFF;
+        opacity: 0.5;
+    }
+    &__back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    &__head {
+        text-align: left;
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: #3B4C68;
+    }
+    &__text {
+        font-family: $secondaryFont;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+        color: #3B4C68;
+        opacity: 0.6;
+    }
+    .mid--green {
+        background-color: $mainColor;
+        position: relative;
+    }
+}

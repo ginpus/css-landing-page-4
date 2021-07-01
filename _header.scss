@@ -1,0 +1,181 @@
+* {
+    outline: solid 1px #000;
+}
+
+// Nesting
+.hero {
+    position: relative;
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+    }
+    header {
+        display: flex;
+        background: $mainColor;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 60px;
+        // @media (max-width: $md) {
+        //     padding: 60px;
+        // }
+        // @media (max-width: $sm) {
+        //     padding: 20px;
+        // }
+        div {
+            display: flex;
+            img {
+                display: block;
+                object-fit: contain;
+                margin-bottom: 10px;
+            }
+            p {
+                color: $thirdColor;
+                font-family: $mainFont;
+                font-weight: bold;
+                font-size: 28px;
+            }
+        }
+        div {
+            display: flex;
+            justify-content: space-between;
+            nav {
+                display: flex;
+                margin: auto 2.22vw;
+                a {
+                    text-decoration: none;
+                    color: $thirdColor;
+                    font-family: $mainFont;
+                    font-size: 20px;
+                    display: inline-block;
+                    padding: 10px 2.22vw;
+                    &:hover,
+                    &:focus {
+                        background-color: $secondaryColor;
+                        color: $mainColor;
+                    }
+                    &.sitaNuoroda {
+                        padding: 40px;
+                    }
+                }
+            }
+            button {
+                margin: auto 2.22vw;
+                @include mygtukas(20px, 46px, $secondaryColor, $thirdColor);
+                font-family: $mainFont;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: $mainColor;
+    padding: 0 40px;
+    height: 634px;
+    border-radius: 0 0 340px 0;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    article {
+        width: 46%;
+        padding: 0 30px;
+        margin-left: 40px;
+        border-radius: 10px;
+        max-width: 70ch;
+        // @media (max-width: $md) {
+        //     width: 42%;
+        //     margin-bottom: 20px;
+        // }
+        // @media (max-width: $sm) {
+        //     width: 90%;
+        // }
+        h2 {
+            font-family: $mainFont;
+            color: $thirdColor;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 53px;
+        }
+        p {
+            font-family: $mainFont;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 200%;
+            color: $thirdColor;
+            opacity: 0.6;
+        }
+        .input-group {
+            display: flex;
+            transition: all ease 0.3s;
+            position: relative;
+            align-items: center;
+            width: 70%;
+            height: 70px;
+            font-family: $mainFont;
+            input {
+                // position: absolute;
+                font-size: 16px;
+                line-height: 19px;
+                color: #3B4C68;
+                padding: 26px 35% 26px 28px;
+                width: 100%;
+                border-radius: 10px;
+                overflow: visible;
+                border: none;
+            }
+            button {
+                width: 106px;
+                height: 54px;
+                position: absolute;
+                color: $thirdColor;
+                font-size: 16px;
+                line-height: 19px;
+                background-color: $secondaryColor;
+                border: none;
+                border-radius: 10px;
+                right: 5px;
+            }
+        }
+        // a {
+        //     @include mygtukas(30px, false, $thirdColor, $secondaryColor);
+        // }
+    }
+    article {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// .alert {
+//     position: relative;
+//     padding: 1rem 1rem;
+//     margin-bottom: 1rem;
+//     border: 1px solid transparent;
+//     border-radius: 0.25rem;
+// }
+// .alert-danger {
+//     @include alert(red, lightcoral);
+// }
+// .alert-success {
+//     @extend .alert;
+//     background-color: lightgreen;
+//     color: green;
+// }
+// .alert-warning {
+//     @extend .alert;
+//     background-color: lightyellow;
+//     color: orange;
+// }

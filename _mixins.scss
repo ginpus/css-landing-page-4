@@ -1,0 +1,36 @@
+@mixin mygtukas($size, $pad, $fcolor, $bcolor) {
+    @if $pad {
+        padding: 17px $pad;
+    }
+    @else {
+        padding: 17px;
+    }
+    font-size: $size;
+    background-color: $bcolor;
+    color: $fcolor;
+    display: inline-block;
+    font-weight: normal;
+    text-decoration: none;
+    border: 0;
+    border-radius: 10px;
+}
+
+@mixin headeris {
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+    color: #3B4C68;
+    text-align: center;
+}
+
+// @mixin alert($color, $back) {
+//     position: relative;
+//     padding: 1rem 1rem;
+//     margin-bottom: 1rem;
+//     border: 1px solid transparent;
+//     border-radius: 0.25rem;
+//     background-color: $back;
+//     color: $color;
+// }
